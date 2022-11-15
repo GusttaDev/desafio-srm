@@ -3,11 +3,15 @@
 == **Testando localmente:**
 1. Execute o comando mvn clean install, raiz do projeto onde está localizado o arquivo pom.xml
 2. Para rodar o projeto basta executar a class Run do projeto : SrmApplication
-3. Abrir o browser digitar a URL: http://localhost:8080/people
+3. Abrir o browser digitar a URL: http://localhost:8080/swagger-ui.html# para acessar o Swagger
 
 == **Pré-requisitos do projeto**
         -Java 8 ou superior
-        -Utilizando banco H2 em memória
+        -Utilizando banco H2 em memória:
+          URL: http://localhost:8080/h2/
+          JDBC URL: jdbc:h2:mem:srmdb
+          username: sa
+          password:''
         -Maven 3.5.* ou superior
         -Configurar o projeto para utilizar os fontes no encode UTF-8
         
