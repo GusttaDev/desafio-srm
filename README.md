@@ -6,6 +6,7 @@
 3. Abrir o browser digitar a URL: http://localhost:8080/swagger-ui.html# para acessar o Swagger
 
 == **Pré-requisitos do projeto**
+
         -Java 8 ou superior
         -Utilizando banco H2 em memória:
           URL: http://localhost:8080/h2/
