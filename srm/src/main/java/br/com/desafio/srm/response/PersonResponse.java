@@ -1,6 +1,6 @@
 package br.com.desafio.srm.response;
 
-import br.com.desafio.srm.entities.IdentifierType;
+import br.com.desafio.srm.entities.enums.IdentifierType;
 import br.com.desafio.srm.entities.PersonEntity;
 import br.com.desafio.srm.utils.Utils;
 import io.swagger.annotations.ApiModel;

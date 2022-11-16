@@ -1,5 +1,6 @@
 package br.com.desafio.srm.entities;
 
+import br.com.desafio.srm.entities.enums.IdentifierType;
 import br.com.desafio.srm.request.PersonRequest;
 import br.com.desafio.srm.utils.Utils;
 import lombok.*;
