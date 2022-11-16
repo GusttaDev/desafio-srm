@@ -31,8 +31,15 @@ public class PersonEntity implements Serializable {
 
         String identifier = Utils.removeSpecialCharacters(personRequest.getIdentifier());
 
+        IdentifierType type = IdentifierType.getType(identifier);
+        if(IdentifierType.CPF.equals(type)){
+            Utils.isValidCpf(identifier);
+        }else{
+            Utils.isValidCNPJ(identifier);
+        }
+
         return PersonEntity.builder()
-                .name(personRequest.getName())
+                .name(personRequest.getName().toUpperCase())
                 .identifier(identifier)
                 .identifierType(IdentifierType.getType(identifier))
                 .build();
