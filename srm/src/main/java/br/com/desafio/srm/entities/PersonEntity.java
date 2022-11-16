@@ -1,6 +1,7 @@
 package br.com.desafio.srm.entities;
 
 import br.com.desafio.srm.request.PersonRequest;
+import br.com.desafio.srm.utils.Utils;
 import lombok.*;
 
 import javax.persistence.*;
@@ -26,10 +27,13 @@ public class PersonEntity implements Serializable {
     private IdentifierType identifierType;
 
     public static PersonEntity convert(PersonRequest personRequest) {
+
+        String identifier = Utils.removeSpecialCharacters(personRequest.getIdentifier());
+
         return PersonEntity.builder()
                 .name(personRequest.getName())
-                .identifier(personRequest.getIdentifier())
-                .identifierType(IdentifierType.getType(personRequest.getIdentifier()))
+                .identifier(identifier)
+                .identifierType(IdentifierType.getType(identifier))
                 .build();
     }
 }

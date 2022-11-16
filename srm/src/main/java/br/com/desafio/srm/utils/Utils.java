@@ -5,6 +5,10 @@ import java.util.regex.Pattern;
 
 public class Utils {
 
+    public static String removeSpecialCharacters(String identifier){
+        return identifier.replaceAll("[^\\d ]", "");
+    }
+
     public static String formatCNPJ(String cnpf) {
 
         Pattern pattern = Pattern.compile("(\\d{2})(\\d{3})(\\d{3})(\\d{4})(\\d{2})");
